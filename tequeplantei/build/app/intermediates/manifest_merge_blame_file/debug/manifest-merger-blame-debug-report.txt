@@ -1,0 +1,184 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.tequeplantei"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->C:\Users\matho\Documents\new-pi4\tequeplantei\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->C:\Users\matho\Documents\new-pi4\tequeplantei\android\app\src\debug\AndroidManifest.xml:6:22-64
+15    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+16    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[com.google.firebase:firebase-database:20.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\a78d113f7b879af374d7915f7ed16f4e\jetified-firebase-database-20.1.0\AndroidManifest.xml:24:5-79
+17-->[com.google.firebase:firebase-database:20.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\a78d113f7b879af374d7915f7ed16f4e\jetified-firebase-database-20.1.0\AndroidManifest.xml:24:22-76
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\54d833e4f8c1749c58a3cc112d09603a\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:24:5-68
+18-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\54d833e4f8c1749c58a3cc112d09603a\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:24:22-65
+19    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+19-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\54d833e4f8c1749c58a3cc112d09603a\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:25:5-79
+19-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\54d833e4f8c1749c58a3cc112d09603a\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:25:22-76
+20    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+20-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:26:5-110
+20-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:26:22-107
+21
+22    <application
+23        android:name="android.app.Application"
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.6.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\f910e53d48c9bb13b167634611201768\core-1.6.0\AndroidManifest.xml:24:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+27        android:label="tequeplantei" >
+28        <activity
+29            android:name="com.example.tequeplantei.MainActivity"
+30            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+31            android:exported="true"
+32            android:hardwareAccelerated="true"
+33            android:launchMode="singleTop"
+34            android:theme="@style/LaunchTheme"
+35            android:windowSoftInputMode="adjustResize" >
+36
+37            <!--
+38                 Specifies an Android theme to apply to this Activity as soon as
+39                 the Android process has started. This theme is visible to the user
+40                 while the Flutter UI initializes. After that, this theme continues
+41                 to determine the Window background behind the Flutter UI.
+42            -->
+43            <meta-data
+44                android:name="io.flutter.embedding.android.NormalTheme"
+45                android:resource="@style/NormalTheme" />
+46
+47            <intent-filter>
+48                <action android:name="android.intent.action.MAIN" />
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+51            </intent-filter>
+52        </activity>
+53        <!--
+54             Don't delete the meta-data below.
+55             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+56        -->
+57        <meta-data
+58            android:name="flutterEmbedding"
+59            android:value="2" />
+60
+61        <service
+61-->[:firebase_database] C:\Users\matho\Documents\new-pi4\tequeplantei\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+62            android:name="com.google.firebase.components.ComponentDiscoveryService"
+62-->[:firebase_database] C:\Users\matho\Documents\new-pi4\tequeplantei\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+63            android:directBootAware="true"
+63-->[com.google.firebase:firebase-common:20.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\44d53db12e9457a0b1e66002dfb946a3\jetified-firebase-common-20.2.0\AndroidManifest.xml:34:13-43
+64            android:exported="false" >
+64-->[com.google.firebase:firebase-database:20.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\a78d113f7b879af374d7915f7ed16f4e\jetified-firebase-database-20.1.0\AndroidManifest.xml:30:13-37
+65            <meta-data
+65-->[:firebase_database] C:\Users\matho\Documents\new-pi4\tequeplantei\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+66                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
+66-->[:firebase_database] C:\Users\matho\Documents\new-pi4\tequeplantei\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-127
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[:firebase_database] C:\Users\matho\Documents\new-pi4\tequeplantei\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+68            <meta-data
+68-->[:firebase_core] C:\Users\matho\Documents\new-pi4\tequeplantei\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+69                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+69-->[:firebase_core] C:\Users\matho\Documents\new-pi4\tequeplantei\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[:firebase_core] C:\Users\matho\Documents\new-pi4\tequeplantei\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+71            <meta-data
+71-->[com.google.firebase:firebase-database:20.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\a78d113f7b879af374d7915f7ed16f4e\jetified-firebase-database-20.1.0\AndroidManifest.xml:31:13-33:85
+72                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+72-->[com.google.firebase:firebase-database:20.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\a78d113f7b879af374d7915f7ed16f4e\jetified-firebase-database-20.1.0\AndroidManifest.xml:32:17-109
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-database:20.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\a78d113f7b879af374d7915f7ed16f4e\jetified-firebase-database-20.1.0\AndroidManifest.xml:33:17-82
+74            <meta-data
+74-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\54d833e4f8c1749c58a3cc112d09603a\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:31:13-33:85
+75                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+75-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\54d833e4f8c1749c58a3cc112d09603a\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:32:17-139
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.android.gms:play-services-measurement-api:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\54d833e4f8c1749c58a3cc112d09603a\jetified-play-services-measurement-api-21.2.0\AndroidManifest.xml:33:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\fabfdd9c5ec57c92273e5336bfb87dfb\jetified-firebase-installations-17.1.0\AndroidManifest.xml:17:13-19:85
+78                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+78-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\fabfdd9c5ec57c92273e5336bfb87dfb\jetified-firebase-installations-17.1.0\AndroidManifest.xml:18:17-127
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-installations:17.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\fabfdd9c5ec57c92273e5336bfb87dfb\jetified-firebase-installations-17.1.0\AndroidManifest.xml:19:17-82
+80        </service>
+81
+82        <uses-library
+82-->[androidx.window:window:1.0.0-beta04] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\5d93ab2f2812dcc02a149cabf48676c0\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+83            android:name="androidx.window.extensions"
+83-->[androidx.window:window:1.0.0-beta04] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\5d93ab2f2812dcc02a149cabf48676c0\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+84            android:required="false" />
+84-->[androidx.window:window:1.0.0-beta04] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\5d93ab2f2812dcc02a149cabf48676c0\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+85        <uses-library
+85-->[androidx.window:window:1.0.0-beta04] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\5d93ab2f2812dcc02a149cabf48676c0\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+86            android:name="androidx.window.sidecar"
+86-->[androidx.window:window:1.0.0-beta04] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\5d93ab2f2812dcc02a149cabf48676c0\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+87            android:required="false" />
+87-->[androidx.window:window:1.0.0-beta04] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\5d93ab2f2812dcc02a149cabf48676c0\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+88
+89        <provider
+89-->[com.google.firebase:firebase-common:20.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\44d53db12e9457a0b1e66002dfb946a3\jetified-firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
+90            android:name="com.google.firebase.provider.FirebaseInitProvider"
+90-->[com.google.firebase:firebase-common:20.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\44d53db12e9457a0b1e66002dfb946a3\jetified-firebase-common-20.2.0\AndroidManifest.xml:26:13-77
+91            android:authorities="com.example.tequeplantei.firebaseinitprovider"
+91-->[com.google.firebase:firebase-common:20.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\44d53db12e9457a0b1e66002dfb946a3\jetified-firebase-common-20.2.0\AndroidManifest.xml:27:13-72
+92            android:directBootAware="true"
+92-->[com.google.firebase:firebase-common:20.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\44d53db12e9457a0b1e66002dfb946a3\jetified-firebase-common-20.2.0\AndroidManifest.xml:28:13-43
+93            android:exported="false"
+93-->[com.google.firebase:firebase-common:20.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\44d53db12e9457a0b1e66002dfb946a3\jetified-firebase-common-20.2.0\AndroidManifest.xml:29:13-37
+94            android:initOrder="100" />
+94-->[com.google.firebase:firebase-common:20.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\44d53db12e9457a0b1e66002dfb946a3\jetified-firebase-common-20.2.0\AndroidManifest.xml:30:13-36
+95
+96        <receiver
+96-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:29:9-33:20
+97            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+97-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:30:13-85
+98            android:enabled="true"
+98-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:31:13-35
+99            android:exported="false" >
+99-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:32:13-37
+100        </receiver>
+101
+102        <service
+102-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:35:9-38:40
+103            android:name="com.google.android.gms.measurement.AppMeasurementService"
+103-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:36:13-84
+104            android:enabled="true"
+104-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:37:13-35
+105            android:exported="false" />
+105-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:38:13-37
+106        <service
+106-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:39:9-43:72
+107            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+107-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:40:13-87
+108            android:enabled="true"
+108-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:41:13-35
+109            android:exported="false"
+109-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:42:13-37
+110            android:permission="android.permission.BIND_JOB_SERVICE" />
+110-->[com.google.android.gms:play-services-measurement:21.2.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\711ab6a6696b2d95b0eff7da96b80072\jetified-play-services-measurement-21.2.0\AndroidManifest.xml:43:13-69
+111
+112        <activity
+112-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\cc67751070ba8f7377d63ab76544c726\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+113            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+113-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\cc67751070ba8f7377d63ab76544c726\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+114            android:exported="false"
+114-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\cc67751070ba8f7377d63ab76544c726\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+115            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+115-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\cc67751070ba8f7377d63ab76544c726\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+116
+117        <meta-data
+117-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\371e697bd847b8f0299b1a4e3e0b40ec\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+118            android:name="com.google.android.gms.version"
+118-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\371e697bd847b8f0299b1a4e3e0b40ec\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+119            android:value="@integer/google_play_services_version" />
+119-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\matho\.gradle\caches\transforms-2\files-2.1\371e697bd847b8f0299b1a4e3e0b40ec\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+120    </application>
+121
+122</manifest>

@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "343163350997",
+    "firebase_url": "https://project-pi-2022-default-rtdb.firebaseio.com",
+    "project_id": "project-pi-2022",
+    "storage_bucket": "project-pi-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343163350997:android:66fc3e58af662ac0e3575c",
+        "android_client_info": {
+          "package_name": "com.example.pi4tequeplantei"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343163350997-tb6b2psvm44b5ggkotjalfgn4q28cvqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR_M0wSH9fgi6xHdJr-pEJyATzqAfJMmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343163350997-tb6b2psvm44b5ggkotjalfgn4q28cvqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343163350997:android:65a8ce3e26722145e3575c",
+        "android_client_info": {
+          "package_name": "com.example.tequeplantei"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343163350997-tb6b2psvm44b5ggkotjalfgn4q28cvqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR_M0wSH9fgi6xHdJr-pEJyATzqAfJMmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343163350997-tb6b2psvm44b5ggkotjalfgn4q28cvqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
