@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\matho\\Documents\\new-pi4\\tequeplantei\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\matho\\Documents\\fatec\\dev web 4\\flutter-app-pi-4\\tequeplantei\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\matho\\Documents\\new-pi4\\tequeplantei\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,821",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "472,987"
-                    },
-                    "to": {
-                        "startLines": "128,133",
-                        "startColumns": "4,4",
-                        "startOffsets": "9441,9738",
-                        "endLines": "132,135",
-                        "endColumns": "12,12",
-                        "endOffsets": "9733,9902"
-                    }
-                },
                 {
                     "source": "C:\\Users\\matho\\.gradle\\caches\\transforms-2\\files-2.1\\cc67751070ba8f7377d63ab76544c726\\jetified-play-services-base-18.0.1\\res\\values\\values.xml",
                     "from": {
@@ -42,6 +23,42 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\matho\\Documents\\fatec\\dev web 4\\flutter-app-pi-4\\tequeplantei\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,821",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "472,987"
+                    },
+                    "to": {
+                        "startLines": "128,133",
+                        "startColumns": "4,4",
+                        "startOffsets": "9441,9738",
+                        "endLines": "132,135",
+                        "endColumns": "12,12",
+                        "endOffsets": "9733,9902"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\matho\\Documents\\fatec\\dev web 4\\flutter-app-pi-4\\tequeplantei\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,322,404,508,617,737,836",
+                        "endColumns": "143,122,81,103,108,119,98,75",
+                        "endOffsets": "194,317,399,503,612,732,831,907"
+                    },
+                    "to": {
+                        "startLines": "119,120,121,122,123,124,125,126",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "8513,8657,8780,8862,8966,9075,9195,9294",
+                        "endColumns": "143,122,81,103,108,119,98,75",
+                        "endOffsets": "8652,8775,8857,8961,9070,9190,9289,9365"
+                    }
+                },
+                {
                     "source": "C:\\Users\\matho\\.gradle\\caches\\transforms-2\\files-2.1\\5d93ab2f2812dcc02a149cabf48676c0\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
@@ -58,23 +75,6 @@
                         "endLines": "7,8,9,10,80,156,160,341,358,366",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "339,399,451,496,5108,11217,11414,21107,22221,22614"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\matho\\Documents\\new-pi4\\tequeplantei\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,322,404,508,617,737,836",
-                        "endColumns": "143,122,81,103,108,119,98,75",
-                        "endOffsets": "194,317,399,503,612,732,831,907"
-                    },
-                    "to": {
-                        "startLines": "119,120,121,122,123,124,125,126",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "8513,8657,8780,8862,8966,9075,9195,9294",
-                        "endColumns": "143,122,81,103,108,119,98,75",
-                        "endOffsets": "8652,8775,8857,8961,9070,9190,9289,9365"
                     }
                 },
                 {
