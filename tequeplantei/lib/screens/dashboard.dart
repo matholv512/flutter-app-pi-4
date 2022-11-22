@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'dart:convert';
+import 'package:date_format/date_format.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -10,10 +12,11 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
+
     var size = MediaQuery.of(context).size;
-    final ref = FirebaseDatabase.instance
-        .ref()
-        .child("ProjectData");
+    final _refValue = FirebaseDatabase.instance
+        .ref().child("ProjectData/leituras").orderByChild("data").limitToLast(1);
+
     
     return SafeArea(
       child: Stack(
@@ -54,18 +57,22 @@ class _DashboardState extends State<Dashboard> {
               ),
             ),
             body: FirebaseAnimatedList(
-                query: ref,
+                query: _refValue,
                 itemBuilder: (context, snapshot, animation, index) {
+                  final value = jsonEncode(snapshot.value);
+                  final state = value.isEmpty;
+
+                  final response = jsonDecode(value)['dadosProjeto'];
+                  
+
                   return Container(
                     child: Padding(
                       padding: const EdgeInsets.only(top: 80.0),
-                      child: ListTile(
-                        title: Text(
-                          snapshot.value.toString().replaceAll("umidadeSolo", "Umidade do Solo").replaceAll("umidadeAr", "Umidade do Ar").replaceAll("temperatura", "Temperatura").replaceAll("{", "").replaceAll("}", "").replaceAll("dadosProjeto", "").replaceAll(":", "").replaceAll("data", ""),
-                          style: const TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w400),
-                        ),
-                      ),
+                      child: Column(
+                        children: [
+                          loadContainer(state, response),
+                        ],
+                      )
                     ),
                   );
                 }),
@@ -96,5 +103,100 @@ class _DashboardState extends State<Dashboard> {
         ],
       ),
     );
+  }
+
+  loadContainer(state, value){
+
+    final _date = formatDate(DateTime.fromMillisecondsSinceEpoch(int.parse(value['data'])*1000, isUtc: true), [dd, '/', mm, '/', yyyy]);
+    
+    return state ? Container(
+      width: MediaQuery.of(context).size.width,
+      height: 200,
+      child: Center(child: CircularProgressIndicator(),)
+    ) :  
+    Container(
+      child: Column(
+        children: [
+        Container(
+          child: Column(
+            children: [
+              Text("Status:", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+              Text(double.parse(value['umidadeSolo']) > 175.00 ? "Falta d'água" : (double.parse(value['umidadeSolo']) < 175.00 && double.parse(value['umidadeSolo']) > 10.00) ? "Saudável" : "Excesso de água")
+          ]),
+        ),
+        Container(
+          margin:  const EdgeInsets.fromLTRB(0,40,0,40),
+          child: Column(
+          children: [
+            Text('Tempreratura do ar : ', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),),
+    
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.thermostat,
+                  color: Color.fromARGB(255, 255, 0, 0),
+                ),
+                Text(value['temperatura']+'°',style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300,))
+              ],
+            ),
+          ],
+        ),
+      ),
+
+      Container(
+        margin:  const EdgeInsets.fromLTRB(0,0,0,40),
+        child: Column(
+          children: [
+            Text('Umidade do solo: ',  style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.water_drop,
+                  color: Color.fromARGB(255, 33, 181, 218),
+                ),
+                Text(value['umidadeSolo'], style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300)),
+              ]
+            ),
+          ],
+        ), 
+      ),
+
+      Container(
+        child: 
+        Column(
+          children: [
+            Text('Umidade do ar: ', style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.water_drop,
+                  color: Color.fromARGB(255, 33, 181, 218),
+                ),
+                Text(value['umidadeAr'], style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300))
+              ],
+            ),
+          ],
+        ),
+      ),
+
+      Container(
+        margin:  const EdgeInsets.fromLTRB(0, 230,0,0),
+        child:  Column(children: [
+          Text("Data da ultima coleta: ",  style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+          Text(_date,  style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300))
+        ]),
+      )
+        
+      ]),
+    );
+
+    
+
   }
 }
