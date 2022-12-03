@@ -121,7 +121,7 @@ class _DashboardState extends State<Dashboard> {
           child: Column(
             children: [
               Text("Status:", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
-              Text(double.parse(value['umidadeSolo']) > 175.00 ? "Falta d'água" : (double.parse(value['umidadeSolo']) < 175.00 && double.parse(value['umidadeSolo']) > 10.00) ? "Saudável" : "Excesso de água")
+              Text(double.parse(value['umidadeSolo']) < 35.00 ? "Falta d'água" : (double.parse(value['umidadeSolo']) > 34.00 && double.parse(value['umidadeSolo']) < 80.00) ? "Saudável" : "Excesso de água")
           ]),
         ),
         Container(
